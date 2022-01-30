@@ -10,5 +10,5 @@ class User
   validates :login, uniqueness: true
 
   validates :password, length: { minimum: 8 }
-  validates :password, presence: true
+  validates :password, presence: true, on: :create
 end

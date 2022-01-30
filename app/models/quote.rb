@@ -7,5 +7,6 @@ class Quote
   field :author, type: String
   field :author_about, type: String
   field :tags, type: Array
+  scope :tags_exits?, ->(search){where(:tags.in => [search])}
   scope :tag_search, ->(search) { where(:tags.in => [search]) }
 end

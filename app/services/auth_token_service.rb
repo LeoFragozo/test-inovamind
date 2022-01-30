@@ -2,7 +2,7 @@
 
 class AuthTokenService
   @token_conf = {
-    secret: 'l30k3y28',
+    secret: 'my$ecretK3y',
     algorithm: 'HS256'
   }
   def self.encode(user_id)
