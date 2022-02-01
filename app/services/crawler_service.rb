@@ -17,7 +17,7 @@ class CrawlerService
   end
 
   def search_quotes
-    doc = scrape("http://quotes.toscrape.com/tag/#{@search}/")
+    doc = scrape("http://quotes.toscrape.com/tag/#{@search_quotes}/")
     quotes = doc.css('div.quote')
     quotes.each do |quote|
       title = quote.css('span.text').text
