@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users, only: [:create]
       resources :auth, only: [:create]
-      resources :quotes, only: [:index]
+      resources :quotes, only: [:index], format: "json"
 
       post 'auth/create', to: 'users#create'
       post 'auth/auth', to: 'auth#create'

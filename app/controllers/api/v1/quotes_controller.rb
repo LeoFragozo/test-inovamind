@@ -5,7 +5,7 @@ module Api
     class QuotesController < ApplicationController
       def index
         @quotes = Quote.all
-        render json: @quotes, root: 'quotes'
+        render 'quotes/index', status: :ok
       end
     end
   end
